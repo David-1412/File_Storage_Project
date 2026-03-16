@@ -1,6 +1,14 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  output: 'export', // Add this
+  images: {
+    unoptimized: true, // Add this
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "cdn.pixabay.com",
+      },
   typescript: {
     ignoreBuildErrors: true,
   },
